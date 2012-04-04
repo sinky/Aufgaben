@@ -14,3 +14,8 @@ Requirements
 
 * PHP
 * MySQL
+
+## Changelog
+
+### 04/04/2012 - 1.0
+* Initial release
