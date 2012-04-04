@@ -27,30 +27,7 @@ try {
       $result['listStatus'] = $todoStatus;
       $error = false; 
       break;  
-      
-      
-    /*
-      case 'completeTodo':
-      $todoId = $_POST['id'];
-      $sql = "UPDATE ".DBTABLE." SET completed = '1' WHERE id='".$todoId."'";
-      $db->query($sql);
-      $sql = "UPDATE ".DBTABLE." SET datecompleted = '".time()."' WHERE id='".$todoId."'";
-      $db->query($sql);
-
-      $error = false; 
-      break;
-      
-    case 'uncompleteTodo':
-      $todoId = $_POST['id'];
-      $sql = "UPDATE ".DBTABLE." SET completed = '0' WHERE id='".$todoId."'";
-      $db->query($sql);
-      $sql = "UPDATE ".DBTABLE." SET datecompleted = '0' WHERE id='".$todoId."'";
-      $db->query($sql);
-
-      $error = false; 
-      break;
-    */
-      
+ 
     case 'switchStatusTodo':
       $todoId = $_POST['id'];
       $todoStatus = getEntryStatus($todoId);

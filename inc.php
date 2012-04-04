@@ -79,10 +79,6 @@ function getList($where='completed', $whereVal='0') {
   return $output;  
 }
 
-function getEntry() {
-  
-}
-
 function getEntryStatus($id) {
   global $db;
   $sql = "SELECT * FROM ".DBTABLE." WHERE id='$id'";

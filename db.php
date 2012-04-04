@@ -31,7 +31,7 @@ $db->numFields(); //Returns the number of fields in a recordset
 $db->mysql_escape_mimic($string); // Returns escaped string
 
 
-http://kjventura.com/2011/11/kickass-php-database-class-for-simple-web-apps/
+Modified version from: http://kjventura.com/2011/11/kickass-php-database-class-for-simple-web-apps/
 
 */
 class Database

@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS `aufgaben` (
   `completed` tinyint(4) NOT NULL default '0',
   `priority` tinyint(4) NOT NULL default '2',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
