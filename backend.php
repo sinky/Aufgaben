@@ -11,7 +11,7 @@ try {
   
     case 'addTodo':
       $todoText = $_POST['text'];
-      $sql = "INSERT INTO todo (text, datecreated) VALUES ('".$todoText."', ".time().")";
+      $sql = "INSERT INTO ".DBTABLE." (text, datecreated) VALUES ('".$todoText."', ".time().")";
       $result['rowid'] = $db->query($sql);
       if(is_int($result['rowid']) && $result['rowid'] > 0) {
         $error = false;  
@@ -28,19 +28,42 @@ try {
       $error = false; 
       break;  
       
+      
+    /*
+      case 'completeTodo':
+      $todoId = $_POST['id'];
+      $sql = "UPDATE ".DBTABLE." SET completed = '1' WHERE id='".$todoId."'";
+      $db->query($sql);
+      $sql = "UPDATE ".DBTABLE." SET datecompleted = '".time()."' WHERE id='".$todoId."'";
+      $db->query($sql);
+
+      $error = false; 
+      break;
+      
+    case 'uncompleteTodo':
+      $todoId = $_POST['id'];
+      $sql = "UPDATE ".DBTABLE." SET completed = '0' WHERE id='".$todoId."'";
+      $db->query($sql);
+      $sql = "UPDATE ".DBTABLE." SET datecompleted = '0' WHERE id='".$todoId."'";
+      $db->query($sql);
+
+      $error = false; 
+      break;
+    */
+      
     case 'switchStatusTodo':
       $todoId = $_POST['id'];
       $todoStatus = getEntryStatus($todoId);
       
       if($todoStatus == 0) {
-        $sql = "UPDATE todo SET completed = '1' WHERE id='".$todoId."'";
+        $sql = "UPDATE ".DBTABLE." SET completed = '1' WHERE id='".$todoId."'";
         $db->query($sql);
-        $sql = "UPDATE todo SET datecompleted = '".time()."' WHERE id='".$todoId."'";
+        $sql = "UPDATE ".DBTABLE." SET datecompleted = '".time()."' WHERE id='".$todoId."'";
         $db->query($sql);  
       }else{
-        $sql = "UPDATE todo SET completed = '0' WHERE id='".$todoId."'";
+        $sql = "UPDATE ".DBTABLE." SET completed = '0' WHERE id='".$todoId."'";
         $db->query($sql);
-        $sql = "UPDATE todo SET datecompleted = '0' WHERE id='".$todoId."'";
+        $sql = "UPDATE ".DBTABLE." SET datecompleted = '0' WHERE id='".$todoId."'";
         $db->query($sql);  
       }
         
@@ -57,7 +80,7 @@ try {
       
     case 'deleteTodo':
       $todoId = $_POST['id'];
-      $sql = "DELETE FROM todo WHERE id='".$todoId."' LIMIT 1";
+      $sql = "DELETE FROM ".DBTABLE." WHERE id='".$todoId."' LIMIT 1";
       
       if($db->query($sql) == 0){
         $error = false;
@@ -67,7 +90,7 @@ try {
     case 'setPriority':
       $todoId = $_POST['id'];
       $todoPriority = $_POST['priority'];
-      $sql = "UPDATE todo SET priority = '".$todoPriority."' WHERE id='".$todoId."'";
+      $sql = "UPDATE ".DBTABLE." SET priority = '".$todoPriority."' WHERE id='".$todoId."'";
       $db->query($sql);
 
 

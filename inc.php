@@ -1,5 +1,6 @@
 <?php 
 include_once("db.php");
+define('DBTABLE', 'aufgaben');
 
 
 $db = new Database();
@@ -30,7 +31,8 @@ $entryTpl = <<<EOD
 </li>
 EOD;
 
-function listEntry($id, $text, $vars=array()) { 
+//array('id'=>$id, 'priority'=>$priority, 'completed'=>$completed, 'datecreated'=>$datecreated, 'datecompleted'=>$datecompleted )
+function listEntry($id, $text, $vars=array()) { //$id, $text, $priority=2, $completed=0, $datecreated='leer', $datecompleted=0) {
   global $entryTpl;
   $defaults = array('priority'=>2, 'completed'=>0, 'datecreated'=>'leer', 'datecompleted'=>0, 'cssclass'=>'');  
   $vars = array_merge($defaults, $vars);  
@@ -69,7 +71,7 @@ function listEntry($id, $text, $vars=array()) {
 
 function getList($where='completed', $whereVal='0') {
   global $db;
-  $sql = "SELECT * FROM todo WHERE $where='$whereVal' ORDER BY priority DESC, datecreated DESC";
+  $sql = "SELECT * FROM ".DBTABLE." WHERE $where='$whereVal' ORDER BY priority DESC, datecreated DESC";
   $db->query($sql);
   while($db->nextRecord()){
     $output .= listEntry($db->Record['id'], $db->Record['text'], array('priority'=>$db->Record['priority'], 'completed'=> $db->Record['completed'], 'datecreated'=> $db->Record['datecreated'], 'datecompleted'=> $db->Record['datecompleted']));
@@ -83,7 +85,7 @@ function getEntry() {
 
 function getEntryStatus($id) {
   global $db;
-  $sql = "SELECT * FROM todo WHERE id='$id'";
+  $sql = "SELECT * FROM ".DBTABLE." WHERE id='$id'";
   $db->query($sql);
   $db->singleRecord();
   return $db->Record['completed'];  

@@ -1,6 +1,11 @@
 <?php 
 ob_start("ob_gzhandler");
 include_once("inc.php"); 
+/* TODO:
+  - löschen
+  - bearbeiten
+  - urls
+*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +19,7 @@ include_once("inc.php");
 </head>
 
 <body>
+<div id="debug"></div>
 
 <div id="page">
 

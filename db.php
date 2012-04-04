@@ -30,7 +30,8 @@ $db->numRows(); //Returns the number of rows in a recordset
 $db->numFields(); //Returns the number of fields in a recordset 
 $db->mysql_escape_mimic($string); // Returns escaped string
 
-Modified Version from here: http://kjventura.com/2011/11/kickass-php-database-class-for-simple-web-apps/
+
+http://kjventura.com/2011/11/kickass-php-database-class-for-simple-web-apps/
 
 */
 class Database
