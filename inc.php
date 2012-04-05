@@ -1,10 +1,13 @@
 <?php 
+if(file_exists("config.php")) {
+    include_once("config.php");
+}else{
+    die("config.php nicht gefunden!");
+}
 include_once("db.php");
-define('DBTABLE', 'aufgaben');
-
 
 $db = new Database();
-$db->connect('<DB_SERVER>', '<DB_NAME>', '<DB_USER>', '<DB_PASS>');
+$db->connect(DBSERVER, DBNAME, DBUSER, DBPASS);
 
 $entryTpl = <<<EOD
 <li class="entry:cssClass:" id="todo_:id:" data-id=":id:" data-completed=":completed:">
