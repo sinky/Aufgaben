@@ -1,15 +1,15 @@
 Aufgaben
 ==========
 
-A ajax powered, lightweight and mobile Safari compatible todolist
+Aufgaben ist eine lightweight, Ajax powered, mobile Safari kompatible Todolist
 
 Features:
 
-* Priority
+* Priorität
 * automatic URL linking
-* lightweight for mobile usage
+* lightweight für mobile nutzung
 
-Requirements
+Vorraussetzungen
 ---------------
 
 * PHP
@@ -18,8 +18,13 @@ Requirements
 Installation
 ---------------
 
-* use install.sql to create table
-* move config.sample.php to config.php an change the settings
+* Benutze install.sql um eine Tabelle mit Beispiel Inhalt zu erstellen
+* Nutze config.sample.php und speicher sie unter config.php mit deinen Einstellungen ab
+
+
+## Screenshots
+![Demo 1](https://github.com/sinky/Aufgaben/raw/master/demo/1_offen.png)
+![Demo 2](https://github.com/sinky/Aufgaben/raw/master/demo/2_erledigt.png)
 
 
 ## Changelog
