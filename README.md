@@ -7,7 +7,7 @@ Features:
 
 * Priorität
 * automatic URL linking
-* lightweight für mobile nutzung
+* lightweight für mobile Nutzung
 
 Vorraussetzungen
 ---------------
