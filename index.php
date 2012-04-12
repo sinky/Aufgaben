@@ -39,9 +39,14 @@ include_once("inc.php");
 	
 </div><!-- /page -->
 
+<!-- 
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/jquery.livequery-1.0.3.js"></script>
 <script src="js/todo.js"></script>
+-->
+ 
+<script src="jsmin.php?f=js/jquery-1.7.1.min.js;js/jquery.livequery-1.0.3.js;js/todo.js"></script>
+
 <script>
   $(document).ready(function(){
     startTheShow();
