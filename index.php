@@ -10,7 +10,7 @@ include_once("inc.php");
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" /> 
-  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>

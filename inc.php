@@ -27,7 +27,7 @@ $entryTpl = <<<EOD
         <span class="normal lk">2 - normal</span>
         <span class="high lk">3 - high</span>
       </div>
-      <span class="edittodo lkO">Bearbeiten</span> <span class="deletetodo lk">L&ouml;schen</span>
+      <span class="edittodo lk">Bearbeiten</span> <span class="deletetodo lk">L&ouml;schen</span>
       
     </span>
   </div>

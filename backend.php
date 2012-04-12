@@ -74,6 +74,16 @@ try {
       $error = false;
       break;
       
+    case 'edittodo':
+      $todoId = $_POST['id'];
+      $todoText = $_POST['text'];
+      $sql = "UPDATE ".DBTABLE." SET text = '".$todoText."' WHERE id='".$todoId."'";
+      $db->query($sql);
+
+
+      $error = false;
+      break;
+      
       
       
     default:

@@ -1,5 +1,5 @@
 --
--- Tabellenstruktur fÃ¼r Tabelle
+-- Tabellenstruktur für Tabelle
 --
 
 CREATE TABLE IF NOT EXISTS `aufgaben` (
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `aufgaben` (
 
 
 --
--- Daten fÃ¼r Tabelle
+-- Daten für Tabelle
 --
 
 INSERT INTO `aufgaben` (`id`, `text`, `datecreated`, `datecompleted`, `completed`, `priority`) VALUES

@@ -57,7 +57,13 @@ function startTheShow() {
   
   $(".entry .edittodo").livequery("click", function(event){
     var id = getID(event.target);
-    edittodo(id);
+    var text = $(".entry[data-id='" + id + "']").find(".text").html();
+    clog(text);
+    var ret = prompt('rename', text);
+   	if (!ret) {
+      return;
+    }
+    edittodo(id, ret);  
   });
   $(".entry .deletetodo").livequery("click", function(event){
     var id = getID(event.target);
@@ -79,10 +85,7 @@ function startTheShow() {
     setpriority(id, 3);
   });
   
-  
-  
-  
-  
+
   
 }
 
@@ -128,7 +131,10 @@ function getID(obj) {
 }
 
 function addTodo(text) {
-  clog('Add Todo: ' + text);
+  clog('Add Todo: ' + text);      
+  
+  if($.trim(text) == "") {return false;}
+  
   $.post('backend.php', {
     action: 'addTodo',
     text: text
@@ -172,8 +178,29 @@ function switchStatusTodo(id) {
   return false;
 }
 
-function edittodo(id) {
-  clog('edit Todo: ' + id); 
+function edittodo(id, text) {
+  clog('edit Todo: ' + id +' '+text);
+  
+  if($.trim(text) == "") {return false;}
+   
+  $.post('backend.php', {
+    action: 'edittodo',
+    id: id,
+    text: text
+  }, function (data) {
+    var data = JSON.parse(data);
+    clog(data);
+
+    if (data.result === true) {
+      $(".entry[data-id='" + id + "']").find(".text").html(text);
+    } else {
+      if (data.message) {
+        alert(data.message);
+      }
+    }
+  });
+  return false;
+  
 }
 
 function deletetodo(id) {
