@@ -20,32 +20,12 @@ form #tn {
 #navbar {float:right;}
 #navbar li {
   display: inline;
-  margin-right: 0.5em;
 }
 
-
-#navbar span {
-  padding: 0.5em;
-  background: #ddd; /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 1%, #e2e2e2 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ffffff 1%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ffffff 1%,#e2e2e2 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ffffff 1%,#e2e2e2 100%); /* IE10+ */
-  background: linear-gradient(top, #ffffff 1%,#e2e2e2 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  border-radius: 0.2em;
-  border: solid 1px #aaa;
-  text-decoration: none;
-  cursor: pointer;
-}
 #navbar .active span {
-  /*font-weight: bold;*/
-  border-color: #000;
-  text-decoration:underline;
+  font-weight: bold;
 }
+
 
 
 

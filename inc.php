@@ -16,20 +16,16 @@ $entryTpl = <<<EOD
     <span class="text">:text:</span>
   </div>
   <div class="more">
-    <span class="right">
-      <div class="datecreated">Erstellt: :datecreated:</div>
-      <div class="datecompleted">Erledigt: :datecompleted:</div>
-    </span>
-    <span class="left">
-      
-      <div class="setpriority">
-        <span class="low lk">1 - low</span>
-        <span class="normal lk">2 - normal</span>
-        <span class="high lk">3 - high</span>
+    <div class="datecreated">Erstellt: :datecreated:</div>
+    <div class="datecompleted">Erledigt: :datecompleted:</div>
+   
+    <div class="button-container">
+      <div class="setpriority button-group">
+        <span class="low big button">low</span>
+        <span class="normal big button">normal</span>
+        <span class="high big button">high</span>
       </div>
-      <span class="edittodo lk">Bearbeiten</span> <span class="deletetodo lk">L&ouml;schen</span>
-      
-    </span>
+      <span class="edittodo button big icon edit">Bearbeiten</span> <span class="deletetodo button big danger icon remove">L&ouml;schen</span>
   </div>
 </li>
 EOD;

@@ -11,6 +11,8 @@ include_once("inc.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" /> 
   <link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="css/gh-buttons.css" type="text/css" rel="stylesheet" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed_aufgaben.png"/>
 </head>
 
 <body>
@@ -18,9 +20,9 @@ include_once("inc.php");
 <div id="page">
 
 	<div id="header">
-  	<ul id="navbar">
-      <li class="active" id="showUncompleted"><span>offen</span></li>
-      <li id="showCompleted"><span>erledigt</span></li>
+  	<ul id="navbar" class="button-group">
+      <li class="active" id="showUncompleted"><span class="button big">offen</span></li>
+      <li id="showCompleted"><span class="button big">erledigt</span></li>
   	</ul><!-- /navbar -->
   	<h1><a href="<?php echo $_SERVER['PHP_SELF']; ?>">Aufgaben</a></h1>
 	</div><!-- /header -->
@@ -33,7 +35,7 @@ include_once("inc.php");
     <ul id="list"></ul>
     <div id="options">
       <span id="status"></span>
-      <img src="img/reload_32.png" id="refresh" border="0" alt="refresh" />
+      <span class="button icon reload">Aktualisieren</span>
     </div>		
 	</div><!-- /content -->
 	

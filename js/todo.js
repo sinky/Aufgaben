@@ -59,7 +59,7 @@ function startTheShow() {
     var id = getID(event.target);
     var text = $(".entry[data-id='" + id + "']").find(".text").html();
     clog(text);
-    var ret = prompt('rename', text);
+    var ret = prompt('Bearbeiten', text);
    	if (!ret) {
       return;
     }

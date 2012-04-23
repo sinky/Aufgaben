@@ -3,8 +3,7 @@ Aufgaben
 
 A ajax powered, lightweight and mobile Safari compatible todolist
 
-Features
----------------
+Features:
 
 * Priority
 * automatic URL linking
@@ -19,5 +18,11 @@ Requirements
 Installation
 ---------------
 
-* Benutze install.sql um eine MySql Tabelle mit Beispielinhalt zu erstellen
-* Nutze config.sample.php und speichere sie unter config.php mit deinen Einstellungen ab
+* use install.sql to create table
+* move config.sample.php to config.php an change the settings
+
+
+## Changelog
+
+### 04/04/2012 - 1.0
+* Initial release
